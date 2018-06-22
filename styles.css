@@ -1,0 +1,25 @@
+body{
+    margin:20%;
+}
+.about-us,.statistics,.auth,.resources,.reviews,.social-media{
+    padding:5%;
+    border: 2px solid blue;
+    border-radius: 5%;
+}
+.loader{
+    width:50px;
+    height:50px;
+    border: 2px solid white;
+    border-radius:50%;
+    border-top-color: blue;
+    margin:auto;
+    animation: spin 1s ease infinite;
+}
+
+@keyframes spin{
+    0%{ transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
