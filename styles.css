@@ -1,11 +1,15 @@
-body{
-    margin:20%;
+header{
+    width: 100%;
 }
-.about-us,.statistics,.auth,.resources,.reviews,.social-media{
-    padding:5%;
-    border: 2px solid blue;
-    border-radius: 5%;
+header div img{
+    float: left;
 }
+header div p{
+    margin-left: 100px;
+}
+
+
+
 .loader{
     width:50px;
     height:50px;
@@ -23,3 +27,38 @@ body{
         transform: rotate(360deg);
     }
 }
+
+
+
+/*TODO hide about us and statistics */
+.proceed{
+    width: 100%;
+    margin: auto;
+    padding-left: 40%;
+
+}
+.button-custom{
+    height: 35px;
+    border-radius: 10%;
+    margin-left: 30px;
+    display: inline;
+    background-color: lightcyan;
+    border: 2px solid black;
+}
+
+.reviews{
+    display: block;
+    width: 100%;
+}
+
+.review{
+    float: left;
+    display: block;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.resources{
+    display: block;
+}
+
