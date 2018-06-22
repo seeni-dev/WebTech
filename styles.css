@@ -10,3 +10,26 @@ header div font{
     padding-left:  70px;
     display: inline;
 }
+
+.search{
+    padding-top: 10%;
+}
+.search p{
+    padding-left: 40%;
+    padding-right: 20%;
+    margin: auto;
+    font-style: oblique;
+    color: blue;
+    font-size:20px;
+}
+.search-input{
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 70%;
+}
+
+.search-submit{
+    margin-left: 40px;
+    margin-top: 30px;
+}
