@@ -67,20 +67,20 @@ header div font{
 .review p{
     padding: 10px;
     text-align: center;
-    border-radius: 10%;
     margin-left: 120px;
-    background-color: skyblue;
-    box-shadow: 0px 0px 25px blue ;
+    background-color: 27f7ae;
+    box-shadow: 0px 0px 25px lightseagreen ;
 }
 
 
 
 .info{
+    margin: 10px;
     margin-top: 240px;
-
-    background-color: lightskyblue;
+    background-color: 27f7ae;
     padding: 10px;
     padding-bottom: 20px;
+    box-shadow: 0px 0px 25px lightseagreen;
 }
 
 .about-us{
@@ -94,10 +94,18 @@ header div font{
 }
 
 .powered{
-    margin-top: 13px;
+    margin-top: 5px;
     float: right;
 }
 
 a{
     color: black;
+}
+
+
+
+/* shadow most */
+.search{
+    box-shadow: 0px 0px 20px lightseagreen;
+    margin:20px;
 }
