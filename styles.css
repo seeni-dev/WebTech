@@ -1,4 +1,9 @@
+.search{
+    background-color: #27f7ae;
+}
+
 header{
+    background-color: white;
     width: 100%;
 }
 header div img{
@@ -12,9 +17,9 @@ header div font{
 }
 
 .search{
-    padding-top: 5%;
+    margin-top: 2%;
+    padding-top:3%;
     padding-bottom: 5%;
-    background-color: aquamarine;
 }
 .search p{
     padding-left: 40%;
