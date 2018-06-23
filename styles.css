@@ -72,11 +72,19 @@ header div font{
 }
 
 
-footer{
-    margin-top: 240px;
 
+.info{
+    margin-top: 240px;
+    background-color: lightskyblue;
+    padding: 10px;
 }
 
-footer p{
+.about-us{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.Contact{
     text-align: center;
 }
