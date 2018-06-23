@@ -75,8 +75,10 @@ header div font{
 
 .info{
     margin-top: 240px;
+
     background-color: lightskyblue;
     padding: 10px;
+    padding-bottom: 20px;
 }
 
 .about-us{
@@ -87,6 +89,11 @@ header div font{
 
 .Contact{
     text-align: center;
+}
+
+.powered{
+    margin-top: 13px;
+    float: right;
 }
 
 a{
