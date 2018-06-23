@@ -48,6 +48,7 @@ header div font{
     font-size:20px;
 }
 
+
 .review p{
     padding:10px;
     width: 20%;
@@ -56,11 +57,21 @@ header div font{
 }
 
 .review p{
+    padding: 10px;
     text-align: center;
     border: 2px solid blue;
     border-radius: 10%;
-    margin-left: 30px;
-    box-shadow: 2px 2px 25px wheat ;
+    margin-left: 120px;
+    background-color: skyblue;
+    box-shadow: 2px 2px 25px gray ;
 }
 
 
+footer{
+    margin-top: 240px;
+
+}
+
+footer p{
+    text-align: center;
+}
