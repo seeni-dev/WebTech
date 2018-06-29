@@ -11,7 +11,7 @@
 
 
 #google{
-	filter: brightness(0.5);	
+	filter: brightness(0.7);	
 }
 
 #facebook{
@@ -23,8 +23,7 @@
 }
 
 #linkedin{
-	background-color: lightgray;
-	filter: opacity(100%);
+	filter: sepia(100%);
 }
 
 #reddit{
@@ -41,5 +40,5 @@
 
 .social-link:hover{
 	filter: none !important;
-	transition: filter 3s;
+	transition: width 3s;
 }
