@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+}
+
 .search{
     background-color: #27f7ae;
 }
@@ -117,9 +121,25 @@ a{
     margin-top: 240px;
     text-align: center;
     column-width: 410px;
-    table-layout: 
 }
 
 .statistics{
 
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+nav{
+	display: flex;	
+	width: 100%;
+    margin-top:50px;
+    margin-bottom: 30px;
+	margin-left: 50px;
+}
+
+.link{
+	width: 100px;
 }
