@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Job Kar</title>
+		<link rel="stylesheet" href="styles_reg.css">
+	</head>
+	<body>
+		<header>
+			<div> 
+				<a href="index.html">
+					<img alt="Job Kar " src="images/logo.png" width="70" height="70">
+					<font size="50"> Job Kar</font>
+				</a>
+			</div>
+		</header>
+		
+		<nav>
+		
+			<div class="link">
+					<a href="index.html">Home</a>
+			</div>
+			<div class="link">
+					<a href="registration.html">Register</a>
+			</div>
+			<div class="link">
+					<a href="resources.html">Resources</a>
+			</div>			
+
+		</nav>
+
+		<div class="signup-form">
+			<form >
+				<div>
+					<label for="name">Name</label>
+					<input type="text" name="name" ></div>
+				<div>
+					<label for="password">Password </label>
+					<input type="password" name="password">
+				</div>
+				<div>
+					<label for="gender">Gender</label>
+					<input type="radio" name="gender" value="male"> Male
+					<input type="radio" name="gender" value="female"> Female
+				</div>
+				
+
+
+				<div> 
+					<label for="dob">Date of birth</label>
+					<input type="Date" name="dob"> </div>
+				<div>
+					<label for="email">Email </label>
+					<input type="email" name="email"></div>
+				<div> 
+					<label for="phno" >Phone No</label>
+					<input type="tel" name="phno"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></div>
+				<div>
+					<label for="degree">Degree</label>
+					<select name="degree">
+						<option value="B.E">B.E</option>
+						<option value="M.S">M.S</option>
+						<option value="M.E">M.E</option>
+						<option value="B.Sc">B.Sc</option>
+					</select>
+				</div>
+				<div>
+					<label for="roles">Enter Type of Job you want to do</label>
+					<input type="checkbox" name="roles" value="soe"> Software Engineer
+					<input type="checkbox" name="roles" value="mle"> Machine Learning Engineer
+					<input type="checkbox" name="roles" value="wd"> Web Developer
+					<input type="checkbox" name="roles" value="ad"> Android Developer
+
+					<input type="checkbox" name="roles" value="id"> IOS Developer
+					
+				</div>
+				<div>
+					<label for="about-me"> 
+					About You: (Write about Yourself)</label>
+					<textarea width="500" height="500" name="about-me"></textarea>
+				</div>
+				<div >
+					<button type="submit" class="button-cus"> Submit </button>
+				</div>
+			</form>
+		</div>
+
+		<footer>
+			<div class="info">
+				<div class="about-us">
+					<h3>About US</h3>
+					<p>Job Kar is an organization devoted itself to ease the process of being recruited  in an organization and recruiting skilled person to an organization.</p>
+				</div>
+				<div class="Contact">
+					<h4>Contact US</h4>
+					<p>Contact Us at 1023789456</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
