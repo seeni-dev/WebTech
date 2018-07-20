@@ -7,9 +7,9 @@ var captchaInput=document.getElementById("captcha");
 //Enter Random Text in Captcha
 var  getRandomCaptcha=function(){
         var captcha="";
-        var options=['A','B']
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         for(let i=0;i<10;i++){
-            captcha+=Math.floor(Math.random()*10);
+            captcha+=possible[Math.floor(Math.random()*possible.length)];
         }
         captchaText.textContent=captcha;
 };
