@@ -39,6 +39,8 @@
             }
 
         </style>
+        
+        
     </head>
 
     <body>
@@ -60,12 +62,18 @@
             <div class="link">
                     <a href="registration.html" id="register">Register</a>
             </div>
-            <div class="link">
+            <div class="link"> 
                     <a href="resources.html" id="resources">Resources</a>
             </div>		
         
         </nav>
-    
+        
+        <div class="head-content">
+            Hello <h1 id="user"> USER </h1>. Its great to have you part of JobKar.
+            We are working for people like you to get a your dream Job
+        </div>
+
+
         <div class="resources">
             <div class="audio">
                 <h3>How to get a job PodCast ?</h3>
@@ -86,6 +94,13 @@
 	
         </script>
         
+        <script>
+                var username=document.cookie.split("=")[1];
+                var user=document.getElementById("user");
+                user.textContent=username;
+        </script>
+    
+
     </body>
 
 </html>

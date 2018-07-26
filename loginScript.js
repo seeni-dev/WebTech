@@ -23,4 +23,5 @@ loginButton.addEventListener("click",function(e){
     expDate.setDate(today.getDate()+exp);
     document.cookie="name="+username.value+"; expires="+expDate;
     console.log("Cookie set and its contents are  "+document.cookie)
+    alert("Login Sucessfull")
 });
