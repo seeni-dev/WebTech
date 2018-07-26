@@ -1,4 +1,5 @@
 var logout=function(){
-    document.cookie="name=seeni";
+    console.log("Current User "+document.cookie+" logged Out");
+    document.cookie="name=";
 }
 logout();
