@@ -12,5 +12,7 @@ open(file,">","FILES/users.txt");
 print "NAME:$name<br>";
 print file "NAME:$name\n";
 
+
+
 print "PASSWORD:$password<br>";
 print file "PASSWORD:$password\n";
