@@ -12,8 +12,13 @@ $dob=$cgi->param("dob");
 $email=$cgi->param("email");
 $phno=$cgi->param("phno");
 
+$dateString=localtime();
+
 open(file,">>","FILES/users.txt");
 print file "\n";
+
+print "USER has been registered with the following fields<br>";
+
 print "NAME:$name<br>";
 print file "NAME:$name\n";
 
@@ -32,5 +37,7 @@ print file "EMAIL:$email\n";
 
 print "PHNO:$phno<br>";
 print file "PHNO:$phno\n";
+
+print file "DATETIME:$dateString\n";
 
 close(file)
