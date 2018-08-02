@@ -9,7 +9,17 @@ $qualification=$cgi->param('qualification');
 
 
 open(ifile,"<","FILES/jobs.txt");
-print $qualification;
+
+$line=<ifile>; # disgard this feed
+$line=<ifile>;
+while($line ne ""){
+    @arr=split(/ /,$line);
+    $line=<ifile>;
+    if(@arr[0] eq $qualification && @arr[2]!=0){
+        print @arr;
+    }
+    print "<br />";
+}
 
 
 close(ifile);
