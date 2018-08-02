@@ -35,6 +35,7 @@ open(ofile,">","FILES/jobs.txt");
 $line=<ifile>;
 while ($line ne ""){
     print ofile $line;
+    $line=<ifile>;
 }
 close(ifile);
 close(ofile);
