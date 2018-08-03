@@ -42,3 +42,11 @@
 	filter: none !important;
 	transition: width 3s;
 }
+
+#captchaText{
+	width: 100px;
+}
+#captchaText:hover{
+	background-color: #27f7ae;
+	transition: background-color 3s;
+}
