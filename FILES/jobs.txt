@@ -1,5 +1,6 @@
 qualification location noa  
-B.E-CSE NewYork 0
-B.E-CSE Wash.D.C 0
+B.E-CSE NewYork 13
+B.E-CSE Wash.D.C 13
 Ph.D LosAngelos 20
-M.C.A Wash.D.C 13
+M.C.A Wash.D.C 11
+M.C.A DELHI 15
