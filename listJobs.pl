@@ -7,39 +7,23 @@ read(STDIN,$FormData,$ENV{'CONTENT-LENGTH'});
 
 $qualification=$cgi->param('qualification');
 
+#Windows-based Perl/DBI/MS Access example
+use DBI;
 
-open(ifile,"<","FILES/jobs.txt");
-open(ofile,">","FILES/jobs.txt.temp");
+my @drivers = DBI->available_drivers;
+print join(", ", @drivers), "\n";
 
-$line=<ifile>; # disgard this feed
-chomp($line);
-print ofile $line;
-$line=<ifile>;
-chomp($line);
-print "<br /> Available Jobs for your Qualification are <br /><br />";
-while($line ne ""){
-    print ofile "\n";
-    @arr=split(/ /,$line);
-    $line=<ifile>;
-    chomp($line);
-    if(@arr[0] eq $qualification && @arr[2]!=0){
-        print "Qualification: @arr[0]<br/>Location: @arr[1]<br/> Available jobs: @arr[2] <br/>";
-        print "<br/><br />";
-        @arr[2]=@arr[2]-1;
-    }
-    print ofile "@arr[0] @arr[1] @arr[2]";
-}
 
-close(ifile);
-close(ofile);
-# recopy the content of files
-open(ifile,"<","FILES/jobs.txt.temp");
-open(ofile,">","FILES/jobs.txt");
-$line=<ifile>;
-while ($line ne ""){
-    print ofile $line;
-    $line=<ifile>;
-}
-close(ifile);
-close(ofile);
+my $DSN = 'driver=Microsoft Access Driver(*.mdb,*.accdb);dbq=C:\Users\Seeni\Documents\JobKar.accdb'; 
+my $dbh = DBI->connect("dbi:ODBC:$DSN", 'root','') or 
+  die "$DBI::errstr\n";
 
+ 
+ #prepare and execute SQL statement
+ $sth = $dbh->prepare('SELECT * FROM [TestCasesOutput]');
+ $sth->execute || 
+       die "Could not execute SQL statement ... maybe invalid?";
+print "Error 4\n";
+ #output database results
+ while (@row=$sth->fetchrow_array)
+  { print "@row\n" }
