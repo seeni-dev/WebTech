@@ -1,4 +1,4 @@
-qualification location noa  
+qual location noa  
 B.E-CSE NewYork 13
 B.E-CSE Wash.D.C 13
 Ph.D LosAngelos 20
