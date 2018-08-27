@@ -24,11 +24,17 @@ while(my @row  = $sth->fetchrow_array()){
   ($qual,$location,$noa)=@row;
   if($qual eq $qualification){
     print "@row[0] @row[1] @row[2] <br />";
-    if(@row[0] eq $qualification){
-      @row[2]-=1;
+    if($noa > 0){
+      $noa-=1;
       $q="Update Jobs set noa=? where qual=? and location=?;";
       $upq=$dbh->prepare($q);
       $upq->execute($noa,$qual,$location) or die "$DBI::errstr<br />"; 
+    }
+    else{
+      $q="Delete from Jobs  where qual=? and location=? and noa=? ;";
+      print($q);
+      $dq=$dbh->prepare($q);
+      $dq->execute($qual,$location,$noa) or die "$DBI::errstr<br />";   
     }
   }
 }
