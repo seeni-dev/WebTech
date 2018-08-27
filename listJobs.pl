@@ -9,7 +9,10 @@ $qualification=$cgi->param('qualification');
 
 use DBI;
 
-my $dbh = DBI->connect('dbi:ODBC:driver=Microsoft Access Driver (*.mdb, *.accdb);dbq=C:\Users\Seeni\Documents\JobKar.accdb', 'root','') or 
+$DSN="driver=Microsoft Access Driver (*.mdb, *.accdb);dbq=C:\\Users\\Seeni\\Documents\\JobKar.accdb";
+print("dbi:ODBC:$DSN");
+
+my $dbh = DBI->connect("dbi:ODBC:$DSN", 'root','') or 
   die "$DBI::errstr\n";
 
 print("Connection Sucessful<br />");
