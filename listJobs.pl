@@ -14,16 +14,10 @@ my @drivers = DBI->available_drivers;
 print join(", ", @drivers), "\n";
 
 
-my $DSN = 'driver=Microsoft Access Driver(*.mdb,*.accdb);dbq=C:\Users\Seeni\Documents\JobKar.accdb'; 
-my $dbh = DBI->connect("dbi:ODBC:$DSN", 'root','') or 
+
+
+
+my $dbh = DBI->connect('dbi:ODBC:driver=Microsoft Access Driver (*.mdb, *.accdb);dbq=C:\Users\Seeni\Documents\JobKar.accdb', 'root','') or 
   die "$DBI::errstr\n";
 
- 
- #prepare and execute SQL statement
- $sth = $dbh->prepare('SELECT * FROM [TestCasesOutput]');
- $sth->execute || 
-       die "Could not execute SQL statement ... maybe invalid?";
-print "Error 4\n";
- #output database results
- while (@row=$sth->fetchrow_array)
-  { print "@row\n" }
+print "Connected";
