@@ -10,9 +10,8 @@ $qualification=$cgi->param('qualification');
 use DBI;
 
 $DSN="driver=Microsoft Access Driver (*.mdb, *.accdb);dbq=C:\\Users\\Seeni\\Documents\\JobKar.accdb";
-print("dbi:ODBC:$DSN");
 
-my $dbh = DBI->connect("dbi:ODBC:$DSN", 'root','') or 
+my $dbh = DBI->connect("dbi:ODBC:$DSN") or 
   die "$DBI::errstr\n";
 
 print("Connection Sucessful<br />");
@@ -22,15 +21,15 @@ $sth=$dbh->prepare("Select * from Jobs;");
 $sth->execute();
 
 while(my @row  = $sth->fetchrow_array()){
-  print "@row[0] @row[1] @row[2] <br />";
-  if(@row[0] eq $qualification){
-    print("qual is equal <br />");
+  ($qual,$location,$noa)=@row;
+  if($qual eq $qualification){
+    print "@row[0] @row[1] @row[2] <br />";
+    if(@row[0] eq $qualification){
+      @row[2]-=1;
+      $q="Update Jobs set noa=? where qual=? and location=?;";
+      $upq=$dbh->prepare($q);
+      $upq->execute($noa,$qual,$location) or die "$DBI::errstr<br />"; 
+    }
   }
 }
 
-print "Connected";
-
-
-print( "DEBUG<br />");
-$DSN = 'driver=Microsoft Access Driver(*.mdb,*.accdb);dbq=C:\Users\Seeni\Documents\JobKar.accdb';
-print("dbi:ODBC:$DSN");
