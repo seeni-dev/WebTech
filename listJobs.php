@@ -23,7 +23,7 @@ $result=mysqli_query($conn,$sq);
 if(mysqli_num_rows($result)>0){
 	echo "QUALIFICATION   LOCATION   NOA<br/>";
 	while ($row=mysqli_fetch_assoc($result) {
-		# code...
+		print($row["qual"]."  ".$row["location"]." ".$row["noa"]);
 	}
 }
 
