@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE jobs SYSTEM "jobs.dtd">
+<?xml-stylesheet type="text/xsl" href="jobs.xsl" ?>
+<jobs>
+	<job id="1">
+		<qualification>B.E-CSE</qualification>
+		<location>DELHI</location>
+		<noa>8</noa>
+	</job>
+	<job id="2">
+		<qualification>Ph.D</qualification>
+		<location>DELHI</location>
+		<noa>6</noa>
+	</job>
+	<job id="3">
+		<qualification>M.C.A</qualification>
+		<location>NEW York</location>
+		<noa>9</noa>
+	</job>
+	<job id="4"> 
+		<qualification>Ph.D</qualification>
+		<location>NEW York</location>
+		<noa>6</noa>
+	</job>
+	<job id="5">
+		<qualification>B-E-MECH</qualification>
+		<location>DELHI</location>
+		<noa>39</noa>
+	</job>
+	<job id="6">
+		<qualification>B-E-MECH</qualification>
+		<location>D.C</location>
+		<noa>29</noa>
+	</job>
+	<job id="7">
+		<qualification>M.C.A</qualification>
+		<location>New York</location>
+		<noa>19</noa>
+	</job>
+
+</jobs>

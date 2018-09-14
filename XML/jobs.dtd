@@ -1,0 +1,6 @@
+<!ELEMENT jobs (job*)>
+<!ELEMENT job (qualification,location,noa)>
+<!ATTLIST job id CDATA #REQUIRED>
+<!ELEMENT qualification (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT noa (#PCDATA)>

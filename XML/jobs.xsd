@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="jobs">
+		<xs:complexType>
+			<xs:element name="job">
+				<xs:complexType>
+					<xs:attribute name="id" type="xs:string" />
+					
+					<xs:sequence>
+						<xs:element name="qualification" type="xs:string" />
+						<xs:element name="location" type="string" />
+						<xs:element name="noa" type="xs:int"
+						 />
+					</xs:sequence>
+				</xs:complexType>
+
+			</xs:element>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

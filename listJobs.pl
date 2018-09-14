@@ -7,35 +7,23 @@ read(STDIN,$FormData,$ENV{'CONTENT-LENGTH'});
 
 $qualification=$cgi->param('qualification');
 
+#Windows-based Perl/DBI/MS Access example
 use DBI;
 
-$DSN="driver=Microsoft Access Driver (*.mdb, *.accdb);dbq=C:\\Users\\Seeni\\Documents\\JobKar.accdb";
+my @drivers = DBI->available_drivers;
+print join(", ", @drivers), "\n";
 
-my $dbh = DBI->connect("dbi:ODBC:$DSN") or 
+
+my $DSN = 'Microsoft Access Driver(*.mdb,*.accdb);dbq=C:\xampp\htdocs\JobKar\FILES\Database.accdb'; 
+my $dbh = DBI->connect("dbi:ODBC:$DSN", 'root','') or 
   die "$DBI::errstr\n";
 
-print("Connection Sucessful<br />");
-
-$sth=$dbh->prepare("Select * from Jobs;");
-
-$sth->execute();
-
-while(my @row  = $sth->fetchrow_array()){
-  ($qual,$location,$noa)=@row;
-  if($qual eq $qualification){
-    print "@row[0] @row[1] @row[2] <br />";
-    if($noa > 0){
-      $noa-=1;
-      $q="Update Jobs set noa=? where qual=? and location=?;";
-      $upq=$dbh->prepare($q);
-      $upq->execute($noa,$qual,$location) or die "$DBI::errstr<br />"; 
-    }
-    else{
-      $q="Delete from Jobs  where qual=? and location=? and noa=? ;";
-      print($q);
-      $dq=$dbh->prepare($q);
-      $dq->execute($qual,$location,$noa) or die "$DBI::errstr<br />";   
-    }
-  }
-}
-
+ 
+ #prepare and execute SQL statement
+ $sth = $dbh->prepare('SELECT * FROM [TestCasesOutput]');
+ $sth->execute || 
+       die "Could not execute SQL statement ... maybe invalid?";
+print "Error 4\n";
+ #output database results
+ while (@row=$sth->fetchrow_array)
+  { print "@row\n" }
