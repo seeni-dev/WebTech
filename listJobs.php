@@ -3,9 +3,9 @@
 $servername="localhost:3305";
 $username="root";
 $password="";
-$qualification=$_POST["qualification"];
+$qualification=$_GET["qualification"];
 
-echo "qualification:".$qualification;
+echo "qualification:".$qualification."<br/>";
 
 //conncetion
 $conn= mysqli_connect($servername,$username,$password);
