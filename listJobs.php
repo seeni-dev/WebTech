@@ -16,15 +16,21 @@ if(!$conn){
 }
 echo "connected sucessfully<br/>";
 
-$sq="SELECT * FROM JOBS where qual=\"$qualification\"";
+#select all matching jobs and noa >0
+$sq="SELECT * FROM JOBS where qual=\"$qualification\" and noa > 0";
 
 $result=mysqli_query($conn,$sq);
 
 if(mysqli_num_rows($result)>0){
 	echo "QUALIFICATION   LOCATION   NOA<br/>";
-	while ($row=mysqli_fetch_assoc($result) ){
-				print("{$row['qual']} {$row['location']} {$row['noa']} <br />");
+	while ($row=mysqli_fetch_array($result) ){
+				$qual=$row['qual'];
+				$location=$row['location'];
+				$noa=(int)$row['noa']-1;
+				print("{$qual} {$location} {$noa} <br />");
 				#subtract the count and update it
+				$uq="UPDATE jobs set noa = {$noa} where qual = \"{$qualification}\" and location =\"{$location}\"";
+				mysqli_query($conn,$uq);
 	}
 }
 
