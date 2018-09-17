@@ -34,5 +34,9 @@ if(mysqli_num_rows($result)>0){
 	}
 }
 
+#delete records whose noa is 0
+$sq="DELETE FROM JOBS where noa = 0";
+mysqli_query($conn,$sq);
+
 mysqli_close($conn);
 ?>
