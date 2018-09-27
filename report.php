@@ -1,6 +1,6 @@
 <?php
 
-$servername="localhost:3305";
+$servername="localhost";
 $username="root";
 $password="";
 
@@ -12,7 +12,7 @@ $conn= mysqli_connect($servername,$username,$password,"jobkar");
 if(!$conn){
 	print ("Connection Error");
 }
-echo "Connected Sucessfully<br/>";
+#echo "<br>Connected Sucessfully<br/>";
 
 #select all matching jobs and noa >0
 $sq="SELECT * FROM JOBS ";
@@ -20,7 +20,7 @@ $sq="SELECT * FROM JOBS ";
 $result=mysqli_query($conn,$sq);
 
 if(mysqli_num_rows($result)>0){
-	echo "QUALIFICATION   LOCATION   NOA<br/>";
+	echo " <br/> QUALIFICATION   LOCATION   NOA<br/>";
 	while ($row=mysqli_fetch_array($result) ){
 				$qual=$row['qual'];
 				$location=$row['location'];

@@ -3,8 +3,8 @@ use JobKar;
 
 Create Table Jobs (qual varchar(20),location varchar(20),noa int);
 
-Insert into Jobs Values("B.E-CSE","NewYork",13);
-Insert into Jobs Values("B.E-CSE","Wash.D.C",13);
-Insert into Jobs Values("Ph.D","LosAngelos",20);
-Insert into Jobs Values("M.C.A","Wash.D.C" ,11);
-Insert into Jobs Values("M.C.A","DELHI", 15);
+Insert into Jobs (qual,location,noa) Values("B.E-CSE","NewYork",13);
+Insert into Jobs  (qual,location,noa)Values("B.E-CSE","Wash.D.C",5);
+Insert into Jobs  (qual,location,noa)Values("Ph.D","LosAngelos",20);
+Insert into Jobs  (qual,location,noa)Values("M.C.A","Wash.D.C" ,11);
+Insert into Jobs (qual,location,noa) Values("M.C.A","DELHI", 15);

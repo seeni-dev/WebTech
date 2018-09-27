@@ -1,6 +1,6 @@
 <?php
 
-$servername="localhost:3305";
+$servername="localhost:3306";
 $username="root";
 $password="";
 $qualification=$_GET["qualification"];
@@ -12,15 +12,12 @@ $conn= mysqli_connect($servername,$username,$password,"jobkar");
 
 if(!$conn){
 	print ("Connection Error");
-
 }
 echo "connected sucessfully<br/>";
 
 #select all matching jobs and noa >0
 $sq="SELECT * FROM JOBS where qual=\"$qualification\" and noa > 0";
-
 $result=mysqli_query($conn,$sq);
-
 if(mysqli_num_rows($result)>0){
 	echo "QUALIFICATION   LOCATION   NOA<br/>";
 	while ($row=mysqli_fetch_array($result) ){
